@@ -1,42 +1,14 @@
-# SUR
-Simple Unpack &amp; Repack Tool - Kitchen for Windows supporting Android 10
+## SUR Revived 
 
+This fork patches the original tool to provide full out-of-the-box compatibility with modern Windows 11 builds:
 
-Changelog v2.0:
+* **Native File Picker:** Replaced the deprecated `mshta` HTML file dialog with a native PowerShell `OpenFileDialog`, fixing the blank ROM selection bug (`ECHO is off.` error).
+* **Modern Privilege Elevation:** Swapped obsolete `cacls` calls for modern UAC elevation checks via `net session` and PowerShell `Start-Process -Verb RunAs`.
+* **Reliable Extraction:** Restored reliable file path parsing when selecting ROM `.zip` packages from the interactive menu.
 
-+Open source
+---
 
-+Friendly interface and few clics options
+## Credits & Disclaimer
 
-+Universal English language
-
-+Supports android 5.0 till android 10 ROM's zip
-
-+Supports the typical format of zip's ROM containing .dat.br, .dat, .img and payload.bin formats
-
-+Drag and drop option for .img and .xz filesystem formats on the executable
-
-+Option to restore your previous project
-
-+Automatic process for unpack and repack the zip rom, leaving intact the original installer of the zip's ROM
-
-+Automatic detection of system as root devices (SAR - A/B slot) and Aonly (conventional system structure)
-
-+Deodexing function for android 8-10 (NEW)
-
-+On screen ROM's information
-
-+ROM's customatizations like change ROM's name, add 1.1.1.1 DNS, remove DM verity, zipalign, etc
-
-+Option to resize system image size (for porting purposes)
-
-+Automatic generation of file_contexts and fs_config to preserve original ROM's permissions
-
-+Inside binaries are completely integrated with Windows 64bits
-
-+Final ROM's zip is signed by default
-
-+Detailed logfile.txt
-
-+Fixed Support for Windows 11
-
+* **Original Developer:** All core features, repack/unpack scripts, and binary integrations were developed by **JamFlux** ([Original Repository](https://github.com/jamflux/SUR)).
+* **License & Attribution:** Per the original author's terms, this tool remains free to use. Proper credits to **JamFlux** and associated tool authors must remain visible wherever modified ROMs created with this tool are distributed or published.
