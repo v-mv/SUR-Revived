@@ -37,3 +37,6 @@ Changelog v2.0:
 +Final ROM's zip is signed by default
 
 +Detailed logfile.txt
+
++Fixed Support for Windows 11
+
